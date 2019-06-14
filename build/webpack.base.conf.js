@@ -9,6 +9,7 @@ function resolve (dir) {
 }
 
 module.exports = {
+  mode: 'production',
   entry: {
     app: './src/main.js'
   },
