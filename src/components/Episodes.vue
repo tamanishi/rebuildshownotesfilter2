@@ -37,13 +37,9 @@ export default {
   mounted () {
     try {
       const self = this
-      axios.get('./static/episodes.json')
+      axios.get('./shownotes-json')
       .then(function (res) {
         self.episodes = res.data.episodes
-      })
-      axios.get('https://rebuild-shownotes-json.tamanishi.workers.dev')
-      .then(function(res) {
-        console.log(res.data.episodes)
       })
     } catch (e) {
       console.log(e)
